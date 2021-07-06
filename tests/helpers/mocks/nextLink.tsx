@@ -16,10 +16,8 @@ const MockLinkComponent: FC<Props> = ({ children, href }: Props) => {
   };
 
   if (typeof children === "string") {
-    return <div onClick={onClick}>{children}</div>;
+    return <span onClick={onClick}>{children}</span>;
   }
-
-  // return <>hello</>;
 
   return cloneElement(children, { href, onClick });
 };

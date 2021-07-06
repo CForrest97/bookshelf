@@ -1,5 +1,6 @@
 import React from "react";
 import { screen } from "@testing-library/react";
+import UserEvent from "@testing-library/user-event";
 
 import AuthorDetailPage from "@src/pages/authors/[id]";
 import { Author } from "@src/modules/authors/entities/Author";
@@ -28,9 +29,9 @@ test("should pass", async () => {
   const { book, author, mockPush } = renderAuthorDetailPage();
 
   expect(await screen.findByRole("heading", { name: author.name }));
-  const bookCard = await screen.findByRole("article");
 
-  screen.debug();
+  const bookCard = await screen.findByRole("article");
+  UserEvent.click(bookCard);
   expect(bookCard).toHaveTextContent(book.name);
-  expect(mockPush).toHaveBeenCalledWith();
+  expect(mockPush).toHaveBeenCalledWith(`/books/${book.id}`);
 });

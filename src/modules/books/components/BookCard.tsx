@@ -10,9 +10,9 @@ const BookCard: FC<Props> = ({ id }: Props) => {
   const { data: book, isLoading } = useBook(id);
 
   return (
-    <article>
-      <Link href={`/books/${id}`}>{isLoading ? "..." : book?.name}</Link>
-    </article>
+    <Link href={`/books/${id}`}>
+      <article>{isLoading ? "..." : book?.name}</article>
+    </Link>
   );
 };
 
