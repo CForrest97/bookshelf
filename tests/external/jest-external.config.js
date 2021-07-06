@@ -8,10 +8,10 @@ module.exports = {
       lines: 95,
     },
   },
-  setupFilesAfterEnv: ["./tests/setupTests.ts"],
+  setupFilesAfterEnv: ["./setupTests.ts"],
   globals: {
     "ts-jest": {
-      tsconfig: "./tsconfig.jest.json",
+      tsconfig: "./tsconfig.json",
     },
     statements: 0,
     branches: 0,
@@ -19,8 +19,8 @@ module.exports = {
     lines: 0,
   },
   moduleNameMapper: {
-    "@src/(.*)": "<rootDir>/src/$1",
-    "@tests/(.*)": "<rootDir>/tests/$1",
+    "@src/(.*)": "<rootDir>/../../src/$1",
+    "@tests/(.*)": "<rootDir>/../../tests/$1",
   },
   testEnvironment: "jsdom",
 };

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "456",
+    "title": "bookTitle",
+    "authors": [
+      {
+        "author": {
+          "key": "/works/123"
+        }
+      }
+    ]
+  }
+]
