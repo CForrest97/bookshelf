@@ -11,12 +11,6 @@ jobs:
           cache: "yarn"
       - run: yarn install
       - run: yarn test:full
-  Deploy:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-    steps:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
