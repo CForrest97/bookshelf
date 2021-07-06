@@ -1,9 +1,10 @@
-nextjs-template:
+bookshelf-app:
   component: "@sls-next/serverless-component@1.18"
   inputs:
-    description: "A template NextJS app deployed on Lambda@Edge"
+    description: "A bookshelf app"
     name:
-      defaultLambda: nextjs-template-app-default
-      apiLambda: nextjs-template-app-api
+      defaultLambda: bookshelf-app-app-default
+      apiLambda: bookshelf-app-app-api
     AccelerateConfiguration:
       AccelerationStatus: Enabled
+    domain: "bookshelf.craigforrest.co.uk"
