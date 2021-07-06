@@ -21,9 +21,9 @@ const AuthorCard: FC<Props> = ({ id }: Props) => {
   assert(author);
 
   return (
-    <article>
-      <Link href={`/authors/${id}`}>{author.name}</Link>
-    </article>
+    <Link href={`/authors/${id}`}>
+      <article>{author.name}</article>
+    </Link>
   );
 };
 
