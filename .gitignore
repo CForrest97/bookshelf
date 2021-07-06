@@ -3,3 +3,5 @@ node_modules/
 coverage/
 .next
 .eslintcache
+.serverless
+.serverless_nextjs

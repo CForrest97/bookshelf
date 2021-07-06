@@ -7,4 +7,6 @@ bookshelf-app:
       apiLambda: bookshelf-app-app-api
     AccelerateConfiguration:
       AccelerationStatus: Enabled
-    domain: "bookshelf.craigforrest.co.uk"
+    domain:
+      - "bookshelf"
+      - "craigforrest.co.uk"
