@@ -10,7 +10,7 @@ jobs:
           node-version: "14"
           cache: "yarn"
       - run: yarn install
-      - run: yarn test:full
+      # - run: yarn test:full
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
