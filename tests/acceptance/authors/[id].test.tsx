@@ -32,7 +32,6 @@ test("should pass", async () => {
 
   const bookCard = await screen.findByRole("article");
   UserEvent.click(bookCard);
-  screen.debug();
   expect(bookCard).toHaveTextContent(book.name);
   expect(mockPush).toHaveBeenCalledWith(`/books/${book.id}`);
 });

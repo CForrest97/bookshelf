@@ -21,3 +21,6 @@ jobs:
           aws-region: us-east-1
       - name: Deploy
         run: yarn deploy
+        env:
+          CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}

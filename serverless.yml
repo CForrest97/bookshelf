@@ -8,8 +8,8 @@ bookshelf-app:
     AccelerateConfiguration:
       AccelerationStatus: Enabled
     cloudfront:
-      distributionId: E2V4HSQ2WVGT1G
-    bucketName: 0f174dr-qh12txe
+      distributionId: ${env.CLOUDFRONT_DISTRIBUTION_ID}
+    bucketName: ${env.S3_BUCKET_NAME}
     domain:
       - "bookshelf"
       - "craigforrest.co.uk"
