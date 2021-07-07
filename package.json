@@ -13,6 +13,7 @@
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watchAll",
     "test:full": "yarn type-check && yarn format && yarn lint && yarn test && yarn test:external",
+    "deploy": "serverless",
     "prepare": "husky install"
   },
   "dependencies": {
