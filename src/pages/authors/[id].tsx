@@ -2,6 +2,7 @@ import React from "react";
 import { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
+import { Grid } from "@chakra-ui/react";
 import { useAuthor, useAuthorsBookIds } from "../../modules/authors/hooks";
 import { parseRouterString } from "../../utils/parseRouterString";
 import BookCard from "../../modules/books/components/BookCard";
@@ -25,9 +26,11 @@ const AuthorDetailPage: NextPage = () => {
         />
       )}
       <section>
-        {bookIds?.map((bookId) => (
-          <BookCard id={bookId} key={bookId} />
-        ))}
+        <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+          {bookIds?.slice(0, 5).map((bookId) => (
+            <BookCard id={bookId} key={bookId} />
+          ))}
+        </Grid>
       </section>
     </>
   );

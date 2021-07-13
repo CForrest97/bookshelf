@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Link from "next/link";
 import assert from "assert";
+import { Skeleton, Heading, Box } from "@chakra-ui/react";
 import { useAuthor } from "../hooks";
 
 type Props = {
@@ -22,7 +23,15 @@ const AuthorCard: FC<Props> = ({ id }: Props) => {
 
   return (
     <Link href={`/authors/${id}`}>
-      <article>{author.name}</article>
+      <article>
+        <Box p={5} shadow="md" borderWidth="1px" h="100%">
+          <Skeleton isLoaded={!isLoading} noOfLines={2}>
+            <Heading fontSize="xl" noOfLines={2}>
+              {author?.name ?? "loading"}
+            </Heading>
+          </Skeleton>
+        </Box>
+      </article>
     </Link>
   );
 };
